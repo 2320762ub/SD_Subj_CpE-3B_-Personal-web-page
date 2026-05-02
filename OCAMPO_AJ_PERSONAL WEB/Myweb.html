@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Website</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    /* Video container with three videos side by side */
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      z-index: -1;
+    }
+    .video-bg {
+      flex: 0.6; /* smaller middle video */
+      object-fit: cover;
+      height: 100%;
+    }
+    .video-side {
+      flex: 0.2; /* each side video takes 20% */
+      object-fit: cover;
+      height: 100%;
+    }
+    /* Navigation bar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      z-index: 10;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+    .navbar a:hover {
+      color: #00aaff;
+    }
+    /* Content overlay */
+    .content {
+      position: relative;
+      text-align: center;
+      color: white;
+      top: 50%;
+      transform: translateY(-50%) scale(0.85);
+    }
+    h1 {
+      font-size: 7vw;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 5px black;
+    }
+    .button-container {
+      margin-top: 20px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      font-size: 15px;
+      color: #fff;
+      background-color: rgba(0, 123, 255, 0.8);
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: rgba(0, 86, 179, 0.9);
+    }
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 10vw;
+      }
+      .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+      .navbar a {
+        font-size: 16px;
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background videos -->
+  <div class="video-container">
+    <!-- Left portrait video -->
+    <video autoplay muted loop class="video-side">
+      <source src="Video_20260430_175855_597.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <!-- Main background video -->
+    <video autoplay muted loop class="video-bg">
+      <source src="Video_20260430_175536_931.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <!-- Right portrait video -->
+    <video autoplay muted loop class="video-side">
+      <source src="Video_20260424_090219_240.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Navigation bar -->
+  <div class="navbar">
+    <a href="about.html">About Me</a>
+    <a href="family.html">Family</a>
+    <a href="friends.html">Friends</a>
+  </div>
+
+  <!-- Overlay content -->
+  <div class="content">
+    <h1>Welcome to My Personal Website</h1>
+    <div class="button-container">
+      <a href="about.html" class="btn">About Me</a>
+      <a href="family.html" class="btn">Family</a>
+      <a href="friends.html" class="btn">Friends</a>
+    </div>
+  </div>
+</body>
+</html>

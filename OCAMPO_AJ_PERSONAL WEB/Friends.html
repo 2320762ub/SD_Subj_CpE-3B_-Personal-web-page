@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friends Collage</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f5e6d3;
+      color: #333;
+    }
+
+    /* Navigation bar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      padding: 8px 0;
+      z-index: 10;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 17px;
+      transition: color 0.3s ease;
+    }
+    .navbar a:hover {
+      color: #ff7e5f;
+    }
+
+    /* Collage layout */
+    .collage {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 80px auto 20px auto;
+      padding: 15px;
+      align-items: flex-start;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    .description {
+      flex: 1;
+      padding: 15px;
+      transition: transform 0.4s ease;
+    }
+    .description:hover {
+      transform: scale(1.02);
+    }
+    .description h1 {
+      font-size: 2.2em;
+      margin-bottom: 15px;
+      font-family: 'Georgia', serif;
+    }
+    .description p {
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .media {
+      flex: 1;
+      text-align: center;
+    }
+
+    /* Photo collage styling */
+    .photo-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .photo-row img {
+      width: 160px;
+      height: 160px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+      transform: rotate(-2deg);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+    }
+    .photo-row img:nth-child(1) { animation-delay: 0.3s; }
+    .photo-row img:nth-child(2) { animation-delay: 0.5s; transform: rotate(2deg); }
+    .photo-row img:nth-child(3) { animation-delay: 0.7s; transform: rotate(-1deg); }
+    .photo-row img:nth-child(4) { animation-delay: 0.9s; transform: rotate(1deg); }
+    .photo-row img:nth-child(5) { animation-delay: 1.1s; transform: rotate(-3deg); }
+    .photo-row img:hover {
+      transform: scale(1.05) rotate(0deg);
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* Quote */
+    .quote {
+      text-align: center;
+      margin: 45px auto;
+      font-size: 1.3em;
+      font-style: italic;
+      max-width: 650px;
+      color: #444;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+      animation-delay: 1.3s;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <div class="navbar">
+    <a href="Myweb.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="family.html">Family</a>
+    <a href="friends.html">Friends</a>
+  </div>
+
+  <!-- Collage layout -->
+  <div class="collage">
+    <div class="description">
+      <h1>My Friends</h1>
+      <p>Friends are the family we choose. They bring joy, laughter, and support into my life. 
+         Whether it’s sharing adventures, celebrating milestones, or simply spending time together, 
+         my friends make every moment brighter. Here are some snapshots of the people who make my journey unforgettable.</p>
+    </div>
+    <div class="media">
+      <div class="photo-row">
+        <img src="1d95a8af-c9ed-4aa5-a69c-8aa1e5646779.jpg" alt="Friend Photo 1">
+        <img src="7ff12304-b5ce-4722-91cb-7db0fe00da1e.jpg" alt="Friend Photo 2">
+        <img src="10d2254e-f7fd-4513-b76a-a34d7809b7d3.jpg" alt="Friend Photo 3">
+        <img src="4f79a937-13fe-41c8-9a5e-9544c339271c.jpg" alt="Friend Photo 4">
+        <img src="a1def9b6-8ad1-4538-bdc6-53b9c1fee479.jpg" alt="Friend Photo 5">
+      </div>
+    </div>
+  </div>
+
+  <!-- Quotation -->
+  <div class="quote">
+    “Good friends are like stars. You don’t always see them, but you know they’re always there.”
+  </div>
+</body>
+</html>

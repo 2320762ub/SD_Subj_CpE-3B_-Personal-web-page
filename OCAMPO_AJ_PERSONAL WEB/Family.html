@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Collage</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f5e6d3;
+      color: #333;
+    }
+
+    /* Navigation bar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      padding: 8px 0;
+      z-index: 10;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 17px;
+      transition: color 0.3s ease;
+    }
+    .navbar a:hover {
+      color: #ff7e5f;
+    }
+
+    /* Collage layout */
+    .collage {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 950px;
+      margin: 80px auto 20px auto;
+      padding: 15px;
+      align-items: flex-start;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    .description {
+      flex: 1;
+      padding: 15px;
+      transition: transform 0.4s ease;
+    }
+    .description:hover {
+      transform: scale(1.02);
+    }
+    .description h1 {
+      font-size: 2.2em;
+      margin-bottom: 15px;
+      font-family: 'Georgia', serif;
+    }
+    .description p {
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .media {
+      flex: 1;
+      text-align: center;
+    }
+
+    /* Photo collage styling */
+    .photo-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .photo-row img {
+      width: 180px;
+      height: 180px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+      transform: rotate(-2deg);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+    }
+    .photo-row img:nth-child(1) { animation-delay: 0.3s; }
+    .photo-row img:nth-child(2) { animation-delay: 0.5s; transform: rotate(2deg); }
+    .photo-row img:nth-child(3) { animation-delay: 0.7s; transform: rotate(-1deg); }
+    .photo-row img:hover {
+      transform: scale(1.05) rotate(0deg);
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* Quote */
+    .quote {
+      text-align: center;
+      margin: 45px auto;
+      font-size: 1.3em;
+      font-style: italic;
+      max-width: 650px;
+      color: #444;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+      animation-delay: 1s;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <div class="navbar">
+    <a href="Myweb.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="family.html">Family</a>
+    <a href="friends.html">Friends</a>
+  </div>
+
+  <!-- Collage layout -->
+  <div class="collage">
+    <div class="description">
+      <h1>My Family</h1>
+      <p>Family is the heart of my life. They are my source of strength, love, and inspiration. 
+         We share countless memories together from simple everyday moments to big celebrations. 
+         This collage shows a glimpse of the people who mean the most to me.</p>
+    </div>
+    <div class="media">
+      <div class="photo-row">
+        <img src="a4d6de5d-f649-4496-b729-dc441b785d1d.jpg" alt="Family Photo 1">
+        <img src="1ec138a5-906d-4b23-8079-9860d8345e2f.jpg" alt="Family Photo 2">
+        <img src="1b0a4ee4-149e-4ae6-9e5f-31382cb6afc6.jpg" alt="Family Photo 3">
+      </div>
+    </div>
+  </div>
+
+  <!-- Quotation -->
+  <div class="quote">
+    “Family is not an important thing, it’s everything.”
+  </div>
+</body>
+</html>

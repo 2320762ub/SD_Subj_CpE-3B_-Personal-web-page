@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me Collage</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f5e6d3;
+      color: #333;
+    }
+
+    /* Navigation bar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      padding: 8px 0;
+      z-index: 10;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 17px;
+      transition: color 0.3s ease;
+    }
+    .navbar a:hover {
+      color: #ff7e5f;
+    }
+
+    /* Collage layout */
+    .collage {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 950px;
+      margin: 80px auto 20px auto;
+      padding: 15px;
+      align-items: flex-start;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    .description {
+      flex: 1;
+      padding: 15px;
+      transition: transform 0.4s ease;
+    }
+    .description:hover {
+      transform: scale(1.02);
+    }
+    .description h1 {
+      font-size: 2.2em;
+      margin-bottom: 15px;
+      font-family: 'Georgia', serif;
+    }
+    .description p {
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .media {
+      flex: 1;
+      text-align: center;
+    }
+
+    /* Photo styling */
+    .photo img {
+      width: 280px;
+      height: 280px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+      margin-bottom: 15px;
+      transform: rotate(-2deg);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+      animation-delay: 0.3s;
+    }
+    .photo img:hover {
+      transform: scale(1.05) rotate(0deg);
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* Video styling */
+    .video-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+    .video-row video {
+      width: 135px;
+      height: 220px;
+      border-radius: 8px;
+      border: 5px solid #fff;
+      object-fit: cover;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+      transform: rotate(2deg);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+    }
+    .video-row video:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+    .video-row video:nth-child(2) {
+      animation-delay: 0.7s;
+    }
+    .video-row video:hover {
+      transform: scale(1.05) rotate(0deg);
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* Sections */
+    .sections {
+      max-width: 750px;
+      margin: 25px auto;
+      text-align: left;
+      padding: 15px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+      animation-delay: 1s;
+    }
+    .sections h2 {
+      font-size: 1.6em;
+      margin-bottom: 8px;
+      border-bottom: 2px solid #333;
+      display: inline-block;
+      transition: color 0.3s ease;
+    }
+    .sections h2:hover {
+      color: #ff7e5f;
+    }
+    .sections ul {
+      list-style-type: square;
+      margin-left: 18px;
+      font-size: 17px;
+    }
+
+    /* Quote */
+    .quote {
+      text-align: center;
+      margin: 45px auto;
+      font-size: 1.3em;
+      font-style: italic;
+      max-width: 650px;
+      color: #444;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+      animation-delay: 1.3s;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <div class="navbar">
+    <a href="Myweb.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="family.html">Family</a>
+    <a href="friends.html">Friends</a>
+  </div>
+
+  <!-- Collage layout -->
+  <div class="collage">
+    <div class="description">
+      <h1>About Me</h1>
+      <p>Hello! My name is Andrei Jhon Ocampo. I’m passionate about pursuing my dreams and enjoy spending time on various activities. This website is my personal space to share my journey, experiences, and the people who inspire me.</p>
+    </div>
+    <div class="media">
+      <div class="photo">
+        <img src="b433fa5e-a19e-4d03-9e9a-bc1c9bd4c05b.jpg" alt="My Photo">
+      </div>
+      <div class="video-row">
+        <video autoplay muted loop>
+          <source src="50c32697-4301-431c-a8e9-659e82e31b73.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video autoplay muted loop>
+          <source src="54add2d7-adcb-490f-bb2b-cfac5ef0f54c.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hobbies and Favorites -->
+  <div class="sections">
+    <h2>Hobbies</h2>
+    <ul>
+      <li>Photography</li>
+      <li>Traveling</li>
+      <li>Eating</li>
+      <li>Cooking</li>
+    </ul>
+
+    <h2>Favorites</h2>
+    <ul>
+      <li>Favorite Food: Pasta</li>
+      <li>Favorite Movie: Avengers</li>
+      <li>Favorite Book: Princess Hearts Romance</li>
+      <li>Favorite Place: The Beach</li>
+    </ul>
+  </div>
+
+  <!-- Quotation -->
+  <div class="quote">
+    “The best way to predict the future is to create it.”
+  </div>
+</body>
+</html>
